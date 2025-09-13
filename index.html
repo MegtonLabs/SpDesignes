@@ -244,8 +244,8 @@
 
 .icon{
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   background:linear-gradient(#4A5CFF 4%, #171E50 100%);
   /* opacity: 70%; */
   border-radius:100%;
@@ -257,9 +257,126 @@
 }
 
 .icon > .fas{
-  font-size: 2.5rem;
-  color: #4A5CFF;
+  font-size: 1.5rem;
+  color: #8792f8;
   mix-blend-mode:color-dodge;
+}
+
+/* Form Container */
+.form-container {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8792f8;
+  font-size: 1rem;
+  z-index: 4;
+}
+
+.email-input {
+  width: 100%;
+  max-width: 250px;
+  height: 38px;
+  padding: 8px 20px 8px 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 14px;
+  font-family: "Geist", sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.email-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* .email-input:focus {
+  border-color: #8792f8;
+  box-shadow: 0 0 10px rgba(135, 146, 248, 0.3);
+} */
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  max-width: 250px;
+  height: 38px;
+  padding: 0 20px;
+  border: 2px solid #385BF8;
+  border-radius: 12px;
+  background: #2D4DDB;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Geist", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(65, 213, 255, 0.3);
+  box-sizing: border-box;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(65, 213, 255, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Back to Login Link */
+.back-to-login {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Geist", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  margin-top: 3px;
+}
+
+/* .back-to-login:hover {
+  color: #8792f8;
+} */
+
+/* Text Styling */
+.text h2 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 15px 0 8px 0;
+  text-align: center;
+}
+
+.text span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
 }
 
 
@@ -283,8 +400,19 @@
            </div>
           
            <div class="text">
- <h2 style="font-weight: 400; color:white;">Forget Password</h3>
-            <span style="text-align:center; font-size:11px; font-weight: 200; color:white;" >We’ll send you an email to reset your password.</span>
+            <h2>Forgot Password</h2>
+            <span>We'll send you an email to reset your password.</span>
+           </div>
+           
+           <div class="form-container">
+             <div class="input-group">
+               <i class="fas fa-envelope input-icon"></i>
+               <input type="email" placeholder="Your Email" class="email-input">
+             </div>
+             
+             <button class="submit-btn">Submit</button>
+             
+             <a href="#" class="back-to-login">BACK TO LOGIN</a>
            </div>
           
 
